@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+$dark-blue: hsl(255, 11%, 22%);
+$dark-violet: hsl(257, 27%, 26%);
+$violte-text: hsl(257, 7%, 63%);
+$cyan: hsl(180, 66%, 49%);
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #9e9aa73b;
+}
+
+main {
+    section {
+        margin: 0 1rem;
+        padding: 1rem;
+        &:first-child {
+            .fst--left {
+                overflow: hidden;
+
+                img {
+                    width: 120%;
+                }
+            }
+
+            .fst--right {
+                text-align: center;
+                .title {
+                    color: $dark-blue;
+                    font-size: 2rem;
+                    font-weight: 700;
+                }
+
+                .desc {
+                    color: $violte-text;
+                }
+
+                .btn {
+                    background-color: $cyan;
+                    border-radius: 2rem;
+                    color: #fff;
+                    font-weight: 700;
+                    margin: 1rem auto;
+                    padding: 0.75rem 2rem;
+                    width: fit-content;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+
+            form {
+
+                background-color: $dark-violet;
+                background-image: url(../images/bg-shorten-mobile.svg);
+                background-position: right top;
+                background-repeat: no-repeat;
+                background-size: contain;
+                border-radius: .5rem;
+                padding: 1rem;
+
+                input {
+                    border-radius: 0.5rem;
+                    border: none;
+                    outline: none;
+                    padding: 0.5rem;
+                    width: 100%;
+                    &:first-child {
+                        margin: 0 0 1rem;
+                    }
+                    &:last-child {
+                        background-color: $cyan;
+                        color: #fff;
+                        font-weight: 700;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .shorts{
+                .short{
+                    background-color: #fff;
+                    border-radius: .5rem;
+                    margin: 1rem 0;
+                    padding-bottom: 1rem;
+
+                    div{
+
+                        padding: 1rem; 
+                        font-weight: 400;
+                        &:first-child{
+                            color:$dark-blue;
+                            border-bottom: 1px solid #9e9aa73b;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                        &:nth-child(2){
+                            color: $cyan;
+                        }
+                        &:last-child{
+                            padding: .5rem; 
+                            background-color: $cyan;
+                            margin: 0 1rem;
+                            text-align: center;
+                            font-weight: 700;
+                            color: #fff;
+                            border-radius: .5rem;
+
+                            &:hover{
+                                cursor: pointer;
+                                background-color: $dark-violet;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    align-items: center;
+    background-color: $dark-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0;
+
+    .footer-colum {
+        &:last-child > .social-networks {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem 0;
+            img {
+                padding: 0.75rem;
+            }
+        }
+
+        ul {
+            padding: 0.75rem 0;
+            list-style: none;
+            li {
+                text-align: center;
+                padding: 0.5rem 0;
+
+                &:first-child > a {
+                    font-weight: 700;
+                    color: #fff;
+                }
+
+                a {
+                    color: hsl(0, 0%, 75%);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
